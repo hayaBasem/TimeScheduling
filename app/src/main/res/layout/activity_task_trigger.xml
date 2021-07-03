@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".TaskTriggerActivity">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_task"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/img_task"/>
+
+    <TextView
+        android:id="@+id/trigger_task_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="00:00 AM"
+        android:layout_below="@id/img_task"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="26dp" />
+
+    <TextView
+        android:id="@+id/trigger_task_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trigger_task_time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Task Title"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/trigger_task_title"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:paddingTop="30dp"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    <TextView
+        android:id="@+id/weather_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperature"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-thin"
+        android:paddingTop="10dp"
+        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_type"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp" />
+
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/btn_dismiss_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:area_margin="3dp"
+        app:icon_margin="3dp"
+        app:outer_color="?attr/colorPrimary"
+        app:slider_height="40dp"
+        app:slider_locked="false"
+        app:text="Task Dismiss"
+        app:text_style="bold" />
+
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/btn_snooze_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_dismiss_task"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:area_margin="3dp"
+        app:icon_margin="3dp"
+        app:outer_color="?attr/colorPrimary"
+        app:slider_height="40dp"
+        app:slider_locked="false"
+        app:slider_reversed="true"
+        app:text="Task Snooze"
+        app:text_style="bold" />
+
+</RelativeLayout>
